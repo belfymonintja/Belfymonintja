@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hutan Potensi dan Pelestariannya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #confirmation {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hutan: Potensi dan Pelestariannya</h1>
+        <p>Mari kita jaga hutan untuk masa depan yang lebih hijau.</p>
+    </header>
+
+    <section id="potensi">
+        <h2>Potensi Hutan</h2>
+        <p>Hutan memiliki potensi besar dalam berbagai aspek:</p>
+        <ul>
+            <li><strong>Ekonomi:</strong> Sumber kayu, hasil hutan non-kayu, dan pariwisata.</li>
+            <li><strong>Ekologi:</strong> Penyerap karbon, pengatur iklim, dan habitat biodiversitas.</li>
+            <li><strong>Sosial:</strong> Tempat hidup bagi masyarakat adat dan sumber mata pencaharian.</li>
+        </ul>
+        <p>Memanfaatkan potensi ini secara berkelanjutan dapat mendukung pembangunan tanpa merusak lingkungan.</p>
+    </section>
+
+    <section id="pelestarian">
+        <h2>Pelestarian Hutan</h2>
+        <p>Pelestarian hutan penting untuk mencegah deforestasi, perubahan iklim, dan kehilangan biodiversitas. Langkah-langkah yang dapat dilakukan:</p>
+        <ul>
+            <li>Reboisasi dan penghijauan.</li>
+            <li>Penguatan hukum perlindungan hutan.</li>
+            <li>Edukasi masyarakat tentang pentingnya hutan.</li>
+            <li>Dukungan dari pemerintah dan swasta untuk konservasi.</li>
+        </ul>
+        <p>Bergabunglah dalam upaya pelestarian untuk generasi mendatang!</p>
+    </section>
+
+    <section id="petisi">
+        <h2>Petisi untuk Pelestarian Hutan</h2>
+        <p>Tandatangani petisi ini untuk mendukung upaya pelestarian hutan di Indonesia. Suara Anda penting!</p>
+        <form id="petitionForm">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pesan">Pesan Dukungan (Opsional):</label>
+            <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+            <button type="submit">Tandatangani Petisi</button>
+        </form>
+        <div id="confirmation">Terima kasih atas dukungan Anda! Petisi telah ditandatangani.</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Website Pelestarian Hutan. Dibuat untuk kesadaran lingkungan.</p>
+    </footer>
+
+    <script>
+        document.getElementById('petitionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+            
+            // Validasi sederhana
+            const nama = document.getElementById('nama').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            if (nama === '' || email === '') {
+                alert('Harap isi nama dan email.');
+                return;
+            }
+            
+            // Simulasi pengiriman (dalam dunia nyata, kirim ke server)
+            console.log('Nama:', nama);
+            console.log('Email:', email);
+            console.log('Pesan:', document.getElementById('pesan').value);
+            
+            // Tampilkan konfirmasi
+            document.getElementById('confirmation').style.display = 'block';
+            
+            // Reset form
+            document.getElementById('petitionForm').reset();
+        });
+    </script>
+</body>
+</html>
